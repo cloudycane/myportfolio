@@ -1,0 +1,20 @@
+div{
+  background-image: url(../img/coverphoto.png);
+  background-repeat: no-repeat; 
+}
+
+nav{
+  background-color: black;
+  align-items: center;
+}
+
+h1{
+  font-size: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nav1,.nav2,.nav3{
+padding-left: 2%;
+padding-right: 2%;
+
+  
+}
