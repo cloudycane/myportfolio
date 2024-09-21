@@ -5,33 +5,87 @@
     <link rel="icon" type="image/svg+xml" href="/myportfolio/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     
-    <script type="module" crossorigin src="/myportfolio/assets/index-GM9HZlsX.js"></script>
-    <link rel="stylesheet" crossorigin href="/myportfolio/assets/index-htTg3nW9.css">
+    <script type="module" crossorigin src="/myportfolio/assets/index-BKIFVGvd.js"></script>
   </head>
   <body>
-    <div class="burger-menu" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <div class="menu" style="text-align: left;">
-        <li class="listmenu" style="background:#4eb062; list-style-type: none; "><a style="color: white;" href="#mycodingprojects">My Coding Projects</a></li>
-        <li class="listmenu" style="background:#4eb062; list-style-type: none;"><a style="color: white;" href="#blogs">My Blogs</a></li>
-        <li class="listmenu" style="background:#4eb062; list-style-type: none;"><a style="color: white;" href="#works">Art Section</a></li>
-        
-        
+    <div class="container-fluid" >
+      <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse position-fixed vh-100" style="left: 0; top: 0;">
+          <div class="position-sticky">
+            <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+              <div style="margin-top: 2%;">
+                <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+              
+                <img src="./assets/jay.jpg" width="64px">
+                
+              </div>
+              <span class="fs-6 fw-semibold m-2">Jay-Ar Abihay Tecson</span>
+              
+            </a>
+            <i class="bi bi-briefcase"></i><span class="fs-6 fw-semibold m-2">Software Developer / UI-UX Artist</span>
+            <ul class="list-unstyled ps-0">
+              <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                  Home
+                </button>
+                <div class="collapse" id="home-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                  Dashboard
+                </button>
+                <div class="collapse" id="dashboard-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a></li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a></li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a></li>
+                  </ul>
+                </div>
+              </li>
+              <!-- More sidebar items... -->
+            </ul>
+          </div>
+        </nav>
+    
+        <!-- Main content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div class="pt-3">
+            <button class="btn btn-primary d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+              Show Sidebar
+            </button>
+            
+            <!-- Your main content goes here -->
+            <div id="root"></div>
+          </div>
+          
+        </main>
+      </div>
     </div>
     
     <script>
-      function toggleMenu() {
-        var menu = document.querySelector('.menu');
-        menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-      }
+      document.getElementById('sidebar-toggle').addEventListener('click', function() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('hidden');
+});
+
     </script>
     
     
-    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    
     
     
   </body>
