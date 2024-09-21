@@ -13,38 +13,49 @@
     <link rel="stylesheet" crossorigin href="/myportfolio/assets/index-WpwJ_ZiJ.css">
   </head>
   <body>
+  <center>
     <div class="container-fluid" >
       <div class="row">
         <!-- Sidebar -->
         <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse position-fixed vh-100" style="left: 0; top: 0;">
           <div class="position-sticky">
+            
             <a href="https://cloudycane.github.io/myportfolio/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
               <div style="margin-top: 2%;">
                 <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
               
-                <img src="./assets/jay.jpg" width="64px">
+                <img src="./assets/jay1.jpg" width="64px">
                 
               </div>
               <span class="fs-6 fw-semibold m-2">Jay-Ar Abihay Tecson</span>
               
+              
             </a>
-            <i class="bi bi-briefcase"></i><span class="fs-6 fw-semibold m-2">Software Developer / UI-UX Artist</span>
-            <ul class="list-unstyled ps-0">
+            <i class="bi bi-briefcase" style="color: cornflowerblue;"></i><span class="fs-6 fw-semibold m-2">Software Developer / UI-UX Artist</span>
+            <br>
+            <i class="bi bi-brush" style="color: cornflowerblue;"></i><span class="fs-6 fw-semibold m-2">Graphic Designer / Photographer</span>
+            <br>
+            <br>
+            <fieldset style="border-style:solid; border-width: 1px; border-color: cornflowerblue;">
+              <span style="margin-top: 4%;" class="fs-6 fw-semibold m-2">A visual art enthusiast especialized in software development, UI/UX design, photography, etc.</span>
+            </fieldset>
+            
+            <ul class="list-unstyled ps-0" style="margin-top: 8%;">
               <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
-                  <i class="bi bi-caret-right-fill"></i> Home
+                  <i style="font-size: 34px; color: cornflowerblue;" class="bi bi-house-heart"></i>&nbsp;<b> Home</b>
                 </button>
                 <div class="collapse" id="home-collapse">
                   <ul class="btn-toggle-nav fw-normal pb-1 small">
                     <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
-                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
-                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</a></li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Blogs</a></li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lessons and Roadmaps</a></li>
                   </ul>
                 </div>
               </li>
               <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                  <i class="bi bi-caret-right-fill"></i> Dashboard
+                  <i style="font-size: 34px; color: cornflowerblue;" class="bi bi-pc-display-horizontal"></i>&nbsp;<b>Projects and Skillsets</b>
                 </button>
                 <div class="collapse" id="dashboard-collapse">
                   <ul class="btn-toggle-nav fw-normal pb-1 small">
@@ -55,9 +66,11 @@
                   </ul>
                 </div>
               </li>
-              <!-- More sidebar items... -->
+              
             </ul>
           </div>
+          
+            
         </nav>
     
         <!-- Main content -->
@@ -74,6 +87,8 @@
         </main>
       </div>
     </div>
+  </center>
+    
     
     <script>
       document.getElementById('sidebar-toggle').addEventListener('click', function() {
