@@ -1,69 +1,201 @@
-<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/myportfolio/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/carousel/">
+
     <title>My Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    
-    <script type="module" crossorigin src="/myportfolio/assets/index-2nQW3aBA.js"></script>
-    <link rel="stylesheet" crossorigin href="/myportfolio/assets/index-Z3MoSraK.css">
-  </head>
-  <body>
-  <center>
-    <div class="container-fluid">
-      <div class="row">
-        <!-- Sidebar -->
-        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-black sidebar collapse position-fixed vh-100" style="left: 0; top: 0; background-color: cornflowerblue; color: white;">
-          <div class="position-sticky">
-            
-            <ul class="list-unstyled ps-0" style="margin-top: 8%;">
-              <li class="mb-1">
-                <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white" href="https://cloudycane.github.io/myportfolio/">
-                  <i style="font-size: 34px; color: white;" class="bi bi-house-heart"></i>&nbsp;<b>Overview</b>
-                </a>
-               
-              </li>
-              <li class="mb-1">
-                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                  <i style="font-size: 34px; color: white;" class="bi bi-pc-display-horizontal"></i>&nbsp;<b>Projects and Skillsets</b>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </nav>
-    
-        <!-- Main content -->
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-          <div class="pt-3">
-            <button class="btn btn-primary d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
-              <i style="color: white;" class="bi bi-compass"></i> Navigate
-            </button>
-    
-            <!-- Your main content goes here -->
-            <div style="margin-top: 1%;" id="root"></div>
-          </div>
-        </main>
-      </div>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- Custom styles for this template -->
+    <link href="/css/carousel.css" rel="stylesheet" asp-append-version="true">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" asp-append-version="true">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous" asp-append-version="true">
+</head>
+
+<body>
+    <div class="navbar-wrapper">
+        <div class="container">
+
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Jay-Ar Abihay Tecson <span class="glyphicon glyphicon-leaf"></span></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Inicio</a></li>
+                            <li><a href="#">Proyectos</a></li>
+                            <li><a href="#">Productos</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blogs<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Nav header</li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
     </div>
-    
-  </center>
-    
-    
-    <script>
-      document.getElementById('sidebar-toggle').addEventListener('click', function() {
-  const sidebar = document.getElementById('sidebar');
-  sidebar.classList.toggle('hidden');
-});
 
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-    
-    
-    
-  </body>
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img class="first-slide" src="/myportfolio/assets/environmentconceptart0.png" alt="First slide" style="filter: blur(8px);">
+                <div class="container">
+                    <div class="carousel-caption">
+                        
+                        <h1><u>Soy UI/UX Designer</u></h1>
+                        <p>
+                          Me dedico a diseñar páginas web, aplicaciones y videojuegos. Creo conceptos de personajes y entornos en 2D y 3D. Además, realizo diseño gráfico y dibujos para dar vida a ideas únicas y visualmente atractivas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="second-slide" src="/myportfolio/assets/imgcarousel2.png" alt="Second slide" style="filter: blur(5px);">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1><u>Soy Software Dev</u></h1>
+                        <p>Especializado en crear aplicaciones multiplataformas con lenguajes de programación tanto en el frontend como en el backend, incluyendo tecnologías .Net y C#, Python, JavaScript, HTML, CSS, Bootstrap, React y Angular. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="third-slide" src="/myportfolio/assets/imgcarousel3.png" alt="Third slide" style="filter: blur(5px);">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1><u>Soy Fotógrafo</u></h1>
+                        <p>Soy fotógrafo con pasión por capturar momentos únicos a través de mi lente. Ya sea en fotografía de retrato, paisaje, eventos o fotografía artística, me enfoco en contar historias visuales que transmitan emociones y belleza.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div><!-- /.carousel -->
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-6">
+                <center>
+                    <img class="img-circle" src="https://images.pexels.com/photos/19951274/pexels-photo-19951274/free-photo-of-gift-to-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Generic placeholder image" width="140" height="140">
+                </center>
+                <h2 class="text-center">Proyecto Sostenibilidad 2025-2030</h2>
+                <p>Nuestra empresa ha iniciado un proyecto de sostenibilidad para el año 2025-2030 que consiste de los productos innovadores los cuales ayudarán a mejorar el sector de agrícultura de nuestro país.</p>
+                <p class="text-center"><a class="btn btn-default" href="#" role="button">Ver detalles »</a></p>
+            </div>
+            <div class="col-lg-6">
+                <center>
+                    <img class="img-circle" src="https://images.pexels.com/photos/1346155/pexels-photo-1346155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Generic placeholder image" width="140" height="140">
+
+                </center>
+                <h2 class="text-center">Proyecto Agua Potable 2022-2025</h2>
+                <p>Nosotros hemos creado productos y tecnologías para convertir el agua contaminada al agua potable las cuales ayudarán milliones de áreas no solamente en nuestro país sino también en el ámbito internacional.</p>
+                <p class="text-center"><a class="btn btn-default" href="#" role="button">Ver detalles »</a></p>
+            </div>
+            
+        </div><!-- /.row -->
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">El mundo está en el cambio constante. <span class="text-muted">No sabemos qué el fúturo nos traerá.</span></h2>
+                <p class="lead">Podemos ayudarles actuar con responsibilidad. Dentro de unos años el cambio climático se empeorá, el agua podría ser ya no potable, habrían más extinciones de animales y organismos en nuestro ecosistema. Con nuestros productos, te podríamos hacer el mundo mejor. </p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-holder-rendered="true">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 col-md-push-5">
+                <h2 class="featurette-heading">Modernización del ecosistema. <span class="text-muted">Balance entre todos los organismos.</span></h2>
+                <p class="lead">Implica introducir innovaciones o cambios que beneficien al conjunto sin alterar la armonía existente, garantizando que todos los elementos del sistema se desarrollen y prosperen en conjunto.</p>
+            </div>
+            <div class="col-md-5 col-md-pull-7">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://images.pexels.com/photos/443383/pexels-photo-443383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-holder-rendered="true">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Ganamos.<span class="text-muted">Y el medio-ambiente más.</span></h2>
+                <p class="lead">Esto implica que las acciones o decisiones tomadas no solo generan un impacto positivo en quienes las realizan, sino que también contribuyen al bienestar y la sostenibilidad del entorno natural.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://images.pexels.com/photos/7551720/pexels-photo-7551720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-holder-rendered="true">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+        <!-- FOOTER -->
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>© 2024 AgriTech Web· <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </footer>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous" asp-append-version="true"></script>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg>
+</body>
 </html>
+
+            
